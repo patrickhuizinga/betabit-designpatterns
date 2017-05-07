@@ -9,8 +9,7 @@ namespace BetaBit.DesignPatterns
         {
             _itemsClient = itemsClient;
 
-            if (SearchContext != null)
-                SearchContext.UpdateSearchPage(this);
+            SearchContext.UpdateSearchPage(this);
         }
 
         public string ClaimId { get; set; }

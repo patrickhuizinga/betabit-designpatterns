@@ -21,14 +21,6 @@ namespace BetaBit.DesignPatterns
             Container = container;
         }
 
-        public string Title
-        {
-            get
-            {
-                if (SearchContext != null)
-                    return SearchContext.Title;
-                return "";
-            }
-        }
+        public string Title => SearchContext.Title;
     }
 }

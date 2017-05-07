@@ -9,7 +9,7 @@ namespace BetaBit.DesignPatterns
         public ContainerViewModel(ItemsClient itemsClient)
         {
             _itemsClient = itemsClient;
-            Data = new Data();
+            Data = new Data() { SearchContext = new NullSearchContext() };
             GotoSearchPage();
         }
 
