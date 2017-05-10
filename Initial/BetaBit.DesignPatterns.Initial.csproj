@@ -37,12 +37,16 @@
   <ItemGroup>
     <Compile Include="ClaimSearchContext.cs" />
     <Compile Include="ClientSearchContext.cs" />
+    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\ClientsClient.cs" />
+    <Compile Include="Clients\ClientsService.cs" />
+    <Compile Include="Clients\ClientType.cs" />
     <Compile Include="ContainerViewModel.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="EditPageViewModel.cs" />
     <Compile Include="ISearchContext.cs" />
-    <Compile Include="ItemsClient.cs" />
-    <Compile Include="ItemsService.cs" />
+    <Compile Include="Items\ItemsClient.cs" />
+    <Compile Include="Items\ItemsService.cs" />
     <Compile Include="PageViewModelBase.cs" />
     <Compile Include="SearchPageViewModel.cs" />
   </ItemGroup>

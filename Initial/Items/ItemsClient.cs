@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace BetaBit.DesignPatterns
 {
@@ -11,7 +11,7 @@ namespace BetaBit.DesignPatterns
             _service = service;
         }
 
-        public string GetItemsByClaim(string claimId)
+        public IEnumerable<string> GetItemsByClaim(string claimId)
         {
             // try return from cache
 
@@ -30,11 +30,6 @@ namespace BetaBit.DesignPatterns
 
                 throw;
             }
-        }
-
-        public string GetItemsByClient(string clientId)
-        {
-            return _service.GetItemsByClient(clientId);
         }
     }
 }

@@ -1,15 +1,15 @@
 ﻿namespace BetaBit.DesignPatterns
 {
-    public class ItemsClient
+    public sealed class ClientsClient
     {
-        private readonly ItemsService _service;
+        private readonly ClientsService _service;
 
-        public ItemsClient(ItemsService service)
+        public ClientsClient(ClientsService service)
         {
             _service = service;
         }
 
-        public string GetItemsByClaim(string claimId)
+        public Client GetClient(ClientId clientId)
         {
             // try return from cache
 
@@ -17,7 +17,7 @@
             retry:
             try
             {
-                var result = _service.GetItemsByClaim(claimId);
+                var result = _service.GetClient(clientId);
                 // cache result
                 return result;
             }
@@ -28,11 +28,6 @@
 
                 throw;
             }
-        }
-
-        public string GetItemsByClient(string clientId)
-        {
-            return _service.GetItemsByClient(clientId);
         }
     }
 }

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace BetaBit.DesignPatterns
 {
     public abstract class PageViewModelBase
@@ -10,7 +12,7 @@ namespace BetaBit.DesignPatterns
             set { Data.SearchContext = value; }
         }
 
-        public string Items
+        public IEnumerable<string> Items
         {
             get { return Data.Items; }
             set { Data.Items = value; }
